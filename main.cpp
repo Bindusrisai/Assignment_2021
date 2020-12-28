@@ -1,6 +1,6 @@
 
 #include<iostream>
-#include <string>
+#include<string>
 #include <ctime>
 #include <thread>
 #include <mutex>
@@ -14,10 +14,10 @@ void remove(string);
 void update(string);
 string create(string, string);
 
-
- 
 int main()
 { 
+
+
   std::cout << std::endl;
   
   
@@ -68,4 +68,20 @@ int main()
             break;
         }
     }
+
+    std::thread t1(d);
+    t1.join();
+    thread t2(k,0);
+    t2.join();
+cout<<"thread is safe\n\n";
+cout<<"exit thread2 \n\n";
 }
+void d()  {  
+    std::cout << "thread 1 created \n\n"; 
+    
+} 
+void k(int x){
+    cout<<"thread 2 created \n\n";
+    cout<<"exit thread1\n\n";
+}
+ 
