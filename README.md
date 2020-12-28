@@ -33,7 +33,7 @@ the key must be retained in the data store. Once the Time-To-Live for a key has 
 the key will no longer be available for Read or Delete operations.
 
 7. Appropriate error responses must always be returned to a client if it uses the data store in
-unexpected ways or breaches any limit.
+unexpected ways or breaches any limit .
 
 
 
