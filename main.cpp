@@ -20,10 +20,7 @@ int main()
 
   std::cout << std::endl;
   
-  
-
-
-    cout << "\t \t \t A file-based key-value data store supporting basic CRD (create, read, and delete) operations !! \n \n" << endl
+  cout << "\t \t \t A file-based key-value data store supporting basic CRD (create, read, and delete) operations !! \n \n" << endl
          << endl;
     // file 
     string file_path;
@@ -70,7 +67,9 @@ int main()
     }
 
     std::thread t1(d);
+    
     t1.join();
+    t1.detach();
     thread t2(k,0);
     t2.join();
 cout<<"thread is safe\n\n";
